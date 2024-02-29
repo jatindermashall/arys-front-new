@@ -1,6 +1,6 @@
 import React from "react";
 import Footer3 from "../footer/Footer3";
-import Header from "../header/Header3";
+import Header from "../header/HeaderDashboard";
 import useBodyClass from "@/hooks/useBodyClass";
 import Head from "next/head";
 
@@ -15,7 +15,6 @@ function Layout({ children }) {
       </Head>
       <Header />
       {children}
-      <Footer3 />
     </>
   );
 }

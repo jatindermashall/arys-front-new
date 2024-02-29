@@ -32,12 +32,13 @@ export default function App({ Component, pageProps }) {
         <>
           <RecoilRoot>
             <Component {...pageProps} />
+
+            <Script id="wow" src="/js/wow.min.js"></Script>
+            <Script
+              id="initWow"
+              strategy="lazyOnload"
+            >{`new WOW().init();`}</Script>
           </RecoilRoot>
-          <Script id="wow" src="/js/wow.min.js"></Script>
-          <Script
-            id="initWow"
-            strategy="lazyOnload"
-          >{`new WOW().init();`}</Script>
         </>
       ) : (
         <Preloader />

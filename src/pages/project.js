@@ -4,6 +4,31 @@ import Link from "next/link";
 import React from "react";
 
 function ProjectPage() {
+  const successStories = [
+    {
+      id: 1,
+      image: "assets/img/home-3/home3-suc-sto-01.png",
+      title: "Streamlining IT Infrastructure",
+      link: "/project-details",
+      description: "Web development",
+    },
+    {
+      id: 2,
+      image: "assets/img/home-3/home3-suc-sto-02.png",
+      title: "Transforming Customer Experience",
+      link: "/project-details",
+      description: "Web development",
+    },
+    {
+      id: 3,
+      image: "assets/img/home-3/home3-suc-sto-03.png",
+      title: "Scaling Agile Development",
+      link: "/project-details",
+      description: "Web development",
+    },
+    // Add more success stories as needed
+  ];
+
   return (
     <Layout>
       <Breadcrumb
@@ -14,234 +39,46 @@ function ProjectPage() {
       <div className="home3-success-stories-area two sec-mar">
         <div className="container-fluid">
           <div className="row g-4 justify-content-center">
-            <div
-              className="col-lg-4 col-md-6 col-sm-10 wow animate fadeInUp"
-              data-wow-delay="200ms"
-              data-wow-duration="1500ms"
-            >
-              <div className="success-storie-card">
-                <div className="success-img">
-                  <img
-                    className="img-fluid magnetic-item"
-                    src="assets/img/home-3/home3-suc-sto-01.png"
-                    alt=""
-                  />
-                </div>
-                <div className="success-content">
-                  <span>Web development</span>
-                  <h3>
-                    <Link legacyBehavior href="/project-details">
-                      <a>Streamlining IT Infrastructure</a>
-                    </Link>
-                  </h3>
-                  <div className="view-btn">
-                    <Link legacyBehavior href="/project-details">
-                      <a>
-                        <svg
-                          width={12}
-                          height={12}
-                          viewBox="0 0 13 13"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M0 1H12M12 1V13M12 1L0.5 12" />
-                        </svg>
-                      </a>
-                    </Link>
+            {successStories.map((story) => (
+              <div
+                className="col-lg-4 col-md-6 col-sm-10 wow animate fadeInUp"
+                data-wow-delay="200ms"
+                data-wow-duration="1500ms"
+              >
+                <div className="success-storie-card">
+                  <div className="success-img">
+                    <img
+                      className="img-fluid magnetic-item"
+                      src={story.image}
+                      alt=""
+                    />
+                  </div>
+                  <div className="success-content">
+                    <span>{story.title}</span>
+                    <h3>
+                      <Link legacyBehavior href="/project-details">
+                        <a>{story.description}</a>
+                      </Link>
+                    </h3>
+                    <div className="view-btn">
+                      <Link legacyBehavior href="/project-details">
+                        <a>
+                          <svg
+                            width={12}
+                            height={12}
+                            viewBox="0 0 13 13"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path d="M0 1H12M12 1V13M12 1L0.5 12" />
+                          </svg>
+                        </a>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div
-              className="col-lg-4 col-md-6 col-sm-10 wow animate fadeInUp"
-              data-wow-delay="300ms"
-              data-wow-duration="1500ms"
-            >
-              <div className="success-storie-card">
-                <div className="success-img">
-                  <img
-                    className="img-fluid magnetic-item"
-                    src="assets/img/home-3/home3-suc-sto-02.png"
-                    alt=""
-                  />
-                </div>
-                <div className="success-content">
-                  <span>Web development</span>
-                  <h3>
-                    <Link legacyBehavior href="/project-details">
-                      <a>Transforming Customer Experience</a>
-                    </Link>
-                  </h3>
-                  <div className="view-btn">
-                    <Link legacyBehavior href="/project-details">
-                      <a>
-                        <svg
-                          width={12}
-                          height={12}
-                          viewBox="0 0 13 13"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M0 1H12M12 1V13M12 1L0.5 12" />
-                        </svg>
-                      </a>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-lg-4 col-md-6 col-sm-10 wow animate fadeInUp"
-              data-wow-delay="400ms"
-              data-wow-duration="1500ms"
-            >
-              <div className="success-storie-card">
-                <div className="success-img magnetic-item">
-                  <img
-                    className="img-fluid"
-                    src="assets/img/home-3/home3-suc-sto-03.png"
-                    alt=""
-                  />
-                </div>
-                <div className="success-content">
-                  <span>Web development</span>
-                  <h3>
-                    <Link legacyBehavior href="/project-details">
-                      <a>Scaling Agile Development</a>
-                    </Link>
-                  </h3>
-                  <div className="view-btn">
-                    <Link legacyBehavior href="/project-details">
-                      <a>
-                        <svg
-                          width={12}
-                          height={12}
-                          viewBox="0 0 13 13"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M0 1H12M12 1V13M12 1L0.5 12" />
-                        </svg>
-                      </a>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-lg-4 col-md-6 col-sm-10 wow animate fadeInUp"
-              data-wow-delay="400ms"
-              data-wow-duration="1500ms"
-            >
-              <div className="success-storie-card">
-                <div className="success-img">
-                  <img
-                    className="img-fluid magnetic-item"
-                    src="assets/img/home-3/home3-suc-sto-01.png"
-                    alt=""
-                  />
-                </div>
-                <div className="success-content">
-                  <span>Web development</span>
-                  <h3>
-                    <Link legacyBehavior href="/project-details">
-                      <a>Optimizing IT Operations</a>
-                    </Link>
-                  </h3>
-                  <div className="view-btn">
-                    <Link legacyBehavior href="/project-details">
-                      <a>
-                        <svg
-                          width={12}
-                          height={12}
-                          viewBox="0 0 13 13"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M0 1H12M12 1V13M12 1L0.5 12" />
-                        </svg>
-                      </a>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-lg-4 col-md-6 col-sm-10 wow animate fadeInUp"
-              data-wow-delay="300ms"
-              data-wow-duration="1500ms"
-            >
-              <div className="success-storie-card">
-                <div className="success-img">
-                  <img
-                    className="img-fluid magnetic-item"
-                    src="assets/img/home-3/home3-suc-sto-02.png"
-                    alt=""
-                  />
-                </div>
-                <div className="success-content">
-                  <span>Web development</span>
-                  <h3>
-                    <Link legacyBehavior href="/project-details">
-                      <a>Maximizing Efficiency with DevOps</a>
-                    </Link>
-                  </h3>
-                  <div className="view-btn">
-                    <Link legacyBehavior href="/project-details">
-                      <a>
-                        <svg
-                          width={12}
-                          height={12}
-                          viewBox="0 0 13 13"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M0 1H12M12 1V13M12 1L0.5 12" />
-                        </svg>
-                      </a>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-lg-4 col-md-6 col-sm-10 wow animate fadeInUp"
-              data-wow-delay="200ms"
-              data-wow-duration="1500ms"
-            >
-              <div className="success-storie-card">
-                <div className="success-img magnetic-item">
-                  <img
-                    className="img-fluid"
-                    src="assets/img/home-3/home3-suc-sto-03.png"
-                    alt=""
-                  />
-                </div>
-                <div className="success-content">
-                  <span>Web development</span>
-                  <h3>
-                    <Link legacyBehavior href="/project-details">
-                      <a>Implementing Robotic Process Automation</a>
-                    </Link>
-                  </h3>
-                  <div className="view-btn">
-                    <Link legacyBehavior href="/project-details">
-                      <a>
-                        <svg
-                          width={12}
-                          height={12}
-                          viewBox="0 0 13 13"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path d="M0 1H12M12 1V13M12 1L0.5 12" />
-                        </svg>
-                      </a>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
           <div className="row">
             <nav aria-label="Page navigation example">

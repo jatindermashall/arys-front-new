@@ -192,101 +192,20 @@ function Header3() {
             </div>
           </div>
           <ul className="menu-list">
-            <li className={`menu-item-has-children ${currentRoute === "/"?"active":""}`}>
-              <a
-                href="#"
-                className={`drop-down ${
-                  state.activeMenu === "home-one" ? "active" : ""
-                }`}
-                onClick={() => toggleMenu("home-one")}
-              >
-                Home
-              </a>
-              <i
-                className={`bi bi-plus dropdown-icon ${
-                  state.activeMenu === "home-one" ? "active" : ""
-                }`}
-                onClick={() => toggleMenu("home-one")}
-              />
-              <ul
-                className={`sub-menu ${
-                  state.activeMenu === "home-one" ? "d-block" : ""
-                }`}
-              >
-                <li>
-                  <Link legacyBehavior href="/">
-                    <a className={`menu-item-has-children ${currentRoute === "/"?"active":""}`}>Home 01</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link legacyBehavior href="/index2">
-                    <a>Home 02</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link legacyBehavior href="/index3">
-                    <a>Home 03</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link legacyBehavior href="/index4">
-                    <a>Home 04</a>
-                  </Link>
-                </li>
-              </ul>
+            <li>
+              <Link legacyBehavior href="/">
+                <a>Home</a>
+              </Link>
             </li>
             <li>
               <Link legacyBehavior href="/about">
                 <a>About</a>
               </Link>
             </li>
-            <li className="menu-item-has-children">
-              <a
-                href="#"
-                className={`drop-down ${
-                  state.activeMenu === "service" ? "active" : ""
-                }`}
-                onClick={() => toggleMenu("service")}
-              >
-                Service
-              </a>{" "}
-              <i
-                className={`bi bi-plus dropdown-icon ${
-                  state.activeMenu === "service" ? "active" : ""
-                }`}
-                onClick={() => toggleMenu("service")}
-              />
-              <ul
-                className={`sub-menu ${
-                  state.activeMenu === "service" ? "d-block" : ""
-                }`}
-              >
-                <li>
-                  <Link legacyBehavior href="/service">
-                    <a>Service 01</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link legacyBehavior href="/service2">
-                    <a>Service 02</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link legacyBehavior href="/service3">
-                    <a>Service 03</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link legacyBehavior href="/service4">
-                    <a>Service 04</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link legacyBehavior href="/service-details">
-                    <a>Service Details</a>
-                  </Link>
-                </li>
-              </ul>
+            <li>
+              <Link legacyBehavior href="/service">
+                <a>Service</a>
+              </Link>
             </li>
             <li className="menu-item-has-children">
               <a href="#" className="drop-down">
@@ -339,7 +258,7 @@ function Header3() {
                   <Link legacyBehavior href="/team1">
                     <a>Team</a>
                   </Link>
-                 
+
                   <i
                     className={`bi bi-plus dropdown-icon ${
                       state.activeSubMenu === "team" ? "active" : ""
