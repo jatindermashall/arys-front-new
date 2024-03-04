@@ -27,7 +27,7 @@ function AboutPage() {
       <Home3Team />
       <Home3Contact />
       <Home3Blog />
-      <div className="bg-blue-500 text-white p-4">
+      <div className="bg-blue-500 text-white p-4 text-center">
         This is an example component using Tailwind CSS.
       </div>
     </Layout>
